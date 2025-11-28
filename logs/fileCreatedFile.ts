@@ -1,5 +1,5 @@
 import { exec } from "child_process";
-import createDependencies from "./main";
+import createDependencies from "../main";
 import { error } from "console";
 import { stderr, stdout } from "process";
 
