@@ -8,7 +8,12 @@ const linesFile = createDependencies<string>("libsNode.log");
 const lines: string[] = linesFile.split(/\r?\n/);
 
 const createInstalledPackages = () => {
-  fs.writeFileSync("installedPackakes.log", linesFile.toString(), "utf-8");
+  const args = process.argv.slice(2);
+  if (args.toString() == "--File") {
+    fs.writeFileSync("installedPackakes.log", linesFile.toString(), "utf-8");
+  } else {
+    return;
+  }
 };
 
 for (const line of lines) {
