@@ -29,6 +29,7 @@ function createDependencies<T>(readableFile: IFileType | string) {
   } as unknown as FileArgs;
 
   const fileArgs = new Data(fileName);
+  fileArgs.createFile();
 
   return fileArgs.file;
 }
